@@ -1,124 +1,147 @@
-💳 Credit Card Default Prediction using Machine Learning
+# 💳 Credit Card Default Prediction using Machine Learning
 
-Predicting customer payment defaults using an end-to-end Machine Learning pipeline for risk assessment and credit decision support.
+Predicting customer payment defaults using an end-to-end Machine Learning pipeline for credit risk assessment and informed lending decisions.
 
-Python • Scikit-Learn • Random Forest • XGBoost • LightGBM • Feature Engineering • SMOTE • ROC-AUC
+**Python • Scikit-Learn • Random Forest • XGBoost • LightGBM • SMOTE • Feature Engineering • ROC-AUC**
 
-📖 Overview
+---
 
-Credit card defaults represent a major financial risk for banks and lending institutions. This project develops a complete machine learning pipeline to predict whether a customer will default on their credit card payment in the following month.
+## 📖 Overview
 
-The workflow includes:
+Credit card default prediction is an important problem in the financial sector. Banks and lending institutions need reliable methods to identify customers who are likely to default on future payments.
 
-Data Cleaning
-Exploratory Data Analysis (EDA)
-Feature Engineering
-Handling Class Imbalance
-Model Training
-Hyperparameter Tuning
-Model Evaluation
+This project develops a complete machine learning pipeline to predict credit card defaults using customer demographic information, billing history, payment behavior, and repayment status.
 
-The objective is to identify high-risk customers and support informed lending decisions.
+The workflow covers:
 
-📑 Table of Contents
-Overview
-Problem Statement
-Methodology
-Results
-Tech Stack
-Repository Structure
-How to Run
-Key Takeaways
-🎯 Problem Statement
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Handling Class Imbalance
+- Model Training
+- Hyperparameter Tuning
+- Model Evaluation
 
-Financial institutions issue credit cards to millions of customers. Some customers fail to repay their dues, resulting in financial losses.
+The final objective is to help financial institutions identify high-risk customers and improve credit risk management.
 
-The goal of this project is to build a machine learning model that can accurately predict whether a customer is likely to default on their next payment based on historical credit behavior, demographic information, billing amounts, and repayment history.
+---
 
-🛠️ Methodology
-1️⃣ Data Cleaning
-Handled missing values
-Removed inconsistencies in categorical variables
-Checked for duplicate records
-Performed data validation and preprocessing
-2️⃣ Exploratory Data Analysis (EDA)
+## 🎯 Problem Statement
 
-Key insights discovered:
+Financial institutions face significant losses when customers fail to repay credit card dues. Predicting potential defaulters in advance enables organizations to make informed lending decisions and reduce financial risk.
 
-Class imbalance exists between default and non-default customers.
-Repayment history is highly correlated with default behavior.
-Credit utilization significantly influences risk.
-Billing and payment patterns reveal customer repayment tendencies.
+The goal of this project is to build a machine learning model capable of predicting whether a customer will default on their next credit card payment based on historical customer data.
 
-Analysis was performed across:
+---
 
-Age
-Education
-Marital Status
-Credit Limit
-Bill Amounts
-Payment Amounts
-3️⃣ Feature Engineering
+## 🛠️ Methodology
 
-Created meaningful features to improve predictive performance:
+### 1. Data Cleaning
 
-Credit Utilization Ratio
-Average Bill Amount
-Average Payment Amount
-Mean Delinquency Score
-Maximum Delinquency
-Delinquent Months Count
-Payment-to-Bill Ratios
-Age-to-Limit Ratio
-Interaction Features
-4️⃣ Handling Class Imbalance
+- Handled missing values
+- Corrected inconsistent categorical values
+- Checked and removed duplicate records
+- Performed data preprocessing and validation
 
-Applied SMOTE (Synthetic Minority Oversampling Technique) to improve minority class representation and reduce model bias.
+### 2. Exploratory Data Analysis (EDA)
 
-5️⃣ Model Training
+Key analyses performed:
 
-The following machine learning models were evaluated:
+- Class distribution analysis
+- Default rate analysis
+- Correlation analysis
+- Credit limit distribution
+- Payment behavior trends
+- Billing amount patterns
+- Demographic analysis
 
-Logistic Regression
-Decision Tree
-Random Forest
-XGBoost
-LightGBM
+Key findings:
 
-Hyperparameter tuning was performed using:
+- Repayment history strongly influences default behavior.
+- Customers with higher delinquency scores show significantly higher default rates.
+- Credit utilization patterns impact repayment risk.
 
-GridSearchCV
-Cross Validation
-6️⃣ Evaluation Metrics
+### 3. Feature Engineering
 
-Models were evaluated using:
+Created several meaningful features to improve model performance:
 
-Accuracy
-Precision
-Recall
-F1 Score
-F2 Score
-ROC-AUC Score
-📊 Results
-🏆 Best Model: Random Forest
-Metric	Score
-Accuracy	88.76%
-Precision	88.93%
-Recall	88.76%
-F1 Score	88.75%
-F2 Score	88.73%
-ROC-AUC	88.78%
-Model Performance
-Model	Accuracy
-Logistic Regression	Evaluated
-Decision Tree	Evaluated
-Random Forest	⭐ Best
-XGBoost	Evaluated
-LightGBM	Evaluated
+- Credit Utilization Ratio
+- Average Bill Amount
+- Average Payment Amount
+- Mean Delinquency Score
+- Maximum Delinquency
+- Delinquent Months Count
+- Payment-to-Bill Ratios
+- Age-to-Limit Ratio
+- Interaction Features
 
-Random Forest achieved the best overall performance, providing a strong balance between precision, recall, and ROC-AUC while maintaining robust generalization.
+### 4. Handling Class Imbalance
 
-📈 Machine Learning Pipeline
+Applied **SMOTE (Synthetic Minority Oversampling Technique)** to improve minority class representation and enhance model learning.
+
+### 5. Model Training
+
+The following models were trained and evaluated:
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- XGBoost
+- LightGBM
+
+### 6. Hyperparameter Tuning
+
+Used:
+
+- GridSearchCV
+- Cross Validation
+
+to optimize model performance and improve generalization.
+
+### 7. Model Evaluation
+
+Evaluation metrics used:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- F2 Score
+- ROC-AUC Score
+
+---
+
+## 📊 Results
+
+### 🏆 Best Model: Random Forest
+
+| Metric | Score |
+|----------|----------|
+| Accuracy | 88.76% |
+| Precision | 88.93% |
+| Recall | 88.76% |
+| F1 Score | 88.75% |
+| F2 Score | 88.73% |
+| ROC-AUC | 88.78% |
+
+### Best Model Performance
+
+```text
+Accuracy      : 0.887598
+Precision     : 0.889348
+Recall        : 0.887598
+F1 Score      : 0.887494
+F2 Score      : 0.887322
+ROC-AUC Score : 0.887773
+```
+
+The Random Forest model achieved the best overall performance among all evaluated models, providing a strong balance between precision, recall, and classification capability.
+
+---
+
+## 📈 Machine Learning Pipeline
+
+```text
 Raw Dataset
      │
      ▼
@@ -150,17 +173,28 @@ Model Evaluation
      │
      ▼
 Prediction
-🛠️ Tech Stack
-Category	Technology
-Language	Python
-Environment	Jupyter Notebook
-Data Processing	Pandas, NumPy
-Visualization	Matplotlib, Seaborn
-Machine Learning	Scikit-Learn
-Imbalanced Learning	SMOTE
-Ensemble Models	Random Forest, XGBoost, LightGBM
-Model Selection	GridSearchCV
-📁 Repository Structure
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|-----------|-----------|
+| Programming Language | Python |
+| Environment | Jupyter Notebook |
+| Data Processing | Pandas, NumPy |
+| Visualization | Matplotlib, Seaborn |
+| Machine Learning | Scikit-Learn |
+| Imbalanced Learning | SMOTE |
+| Ensemble Models | Random Forest, XGBoost, LightGBM |
+| Model Selection | GridSearchCV |
+
+---
+
+## 📁 Repository Structure
+
+```text
 Credit-Card-Default-Prediction/
 │
 ├── Dataset/
@@ -178,25 +212,53 @@ Credit-Card-Default-Prediction/
 ├── README.md
 │
 └── requirements.txt
-▶️ How to Run
-Clone Repository
+```
+
+---
+
+## ▶️ How to Run
+
+### Clone Repository
+
+```bash
 git clone https://github.com/yourusername/Credit-Card-Default-Prediction.git
 
 cd Credit-Card-Default-Prediction
-Install Dependencies
+```
+
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
-Launch Jupyter Notebook
+```
+
+### Or Install Packages Manually
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn xgboost lightgbm
+```
+
+### Launch Jupyter Notebook
+
+```bash
 jupyter notebook
+```
 
 Run notebooks in the following order:
 
-1. EDA.ipynb
-2. feature-engineering.ipynb
-3. model-training-tunning-prediction.ipynb
-🎯 Key Takeaways
-Repayment history is the strongest predictor of default risk.
-Feature engineering improved model performance significantly.
-SMOTE helped address class imbalance.
-Ensemble models outperformed simpler models.
-Random Forest achieved the best overall results.
-The final model can assist financial institutions in identifying high-risk customers and improving credit risk management.
+1. `EDA.ipynb`
+2. `feature-engineering.ipynb`
+3. `model-training-tunning-prediction.ipynb`
+
+---
+
+## 🎯 Key Takeaways
+
+- Repayment history is the strongest predictor of default risk.
+- Feature engineering significantly improved model performance.
+- SMOTE helped address class imbalance effectively.
+- Ensemble methods outperformed simpler machine learning models.
+- Random Forest achieved the best overall performance.
+- The final model can support financial institutions in identifying high-risk customers and reducing default-related losses.
+
+---
